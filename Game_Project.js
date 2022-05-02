@@ -38,8 +38,11 @@ var guess2 = "";
 var count = 0;
 var points = 0;
 
+// $("li").removeClass("not-clickable");
+
 $("li").click(function() {
   if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
+
     
     count++;
     $(this).children("img").show();
@@ -51,6 +54,11 @@ $("li").click(function() {
     
     else { 
       guess2 = $(this).children("img").attr("src"); 
+
+      $("li").addClass("not-clickable");
+      setTimeout(function(){
+            $("li").removeClass("not-clickable");
+       },1000);
       
       if (guess1 === guess2) { 
         console.log("match");

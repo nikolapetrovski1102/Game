@@ -28,8 +28,21 @@ h1 {
     background-image: url("https://www.finki.ukim.mk/Content/dataImages/downloads/logo-large-500x500_2.png");
     background-position: center;
     background-size: cover;
+    cursor: pointer;
   }
-  img { 
+  li:hover{
+    animation-name: lihover;
+  	animation-duration: 2s;
+  }
+  @keyframes lihover {
+    from {
+      background-size: 100%;
+    }
+    to {
+      background-size: 120%;
+    }
+  }
+  img {
     width: 100%;
     height: 100%;
   }
@@ -47,6 +60,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
+    transition: transform 2s;
   }
   .winner button{
     margin-top: 20%;
@@ -180,4 +194,7 @@ h1 {
  }
   .blur{
    filter: blur(5px);
+ }
+ .not-clickable{
+   pointer-events: none;;
  }
