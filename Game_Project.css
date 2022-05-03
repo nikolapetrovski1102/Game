@@ -30,7 +30,7 @@ h1 {
     background-size: cover;
     cursor: pointer;
   }
-  li:hover{
+  /* li:hover{
     animation-name: lihover;
   	animation-duration: 2s;
   }
@@ -41,7 +41,7 @@ h1 {
     to {
       background-size: 120%;
     }
-  }
+  } */
   img {
     width: 100%;
     height: 100%;
@@ -85,8 +85,10 @@ h1 {
   }
   @media only screen and (max-width: 480px) {
     li {
-      width: 60px;
-      height: 60px;
+      padding: 0;
+      margin: 2%;
+      width: 65px;
+      height: 65px;
       max-width: 100%;
     }
     .winner {
@@ -109,8 +111,10 @@ h1 {
   }
   @media only screen and (max-width: 390px) {
     li {
-      width: 50px;
-      height: 50px;
+      padding: 0;
+      margin: 2%;
+      width: 60px;
+      height: 60px;
       max-width: 100%;
     }
     .winner {
@@ -133,10 +137,13 @@ h1 {
   }
   @media only screen and (max-width: 400px) {
     li {
-      width: 50px;
-      height: 50px;
+      padding: 0;
+      margin: 2%;
+      width: 60px;
+      height: 60px;
       max-width: 100%;
-    }    .winner {
+    }    
+    .winner {
       width: 300px;
       height: 200px;
     }
@@ -156,10 +163,13 @@ h1 {
   }
   @media only screen and (max-width: 360px) {
     li {
-      width: 45px;
-      height: 45px;
+      padding: 0;
+      margin: 2%;
+      width: 40px;
+      height: 40px;
       max-width: 100%;
-    }    .winner {
+    } 
+    .winner {
       width: 300px;
       height: 200px;
     }
@@ -177,19 +187,64 @@ h1 {
       margin-top: 15%;
     }
   }
-  .confetti{
-    max-width: 640px;
-    display: block;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    user-select: none;
- }
+  @media only screen and (max-width: 375px) {
+    li {
+      padding: 0;
+      margin: 2%;
+      width: 55px;
+      height: 55px;
+      max-width: 100%;
+    } 
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+    .winner #final{
+      margin-top: 15%;
+    }
+  }
+  @media only screen and (max-width: 280px) {
+    li {
+      padding: 0;
+      margin: 2%;
+      width: 40.5px;
+      height: 40.5px;
+      max-width: 100%;
+    } 
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+    .winner #final{
+      margin-top: 15%;
+    }
+  }
  canvas{
    left: 0;
    top: 0;
    position: absolute;
-   min-width: 99.8%;
-   border: 1px solid black;
+   width: 99.9%;
+   height: 99.8%;
    z-index: -10;
  }
   .blur{

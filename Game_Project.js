@@ -38,8 +38,6 @@ var guess2 = "";
 var count = 0;
 var points = 0;
 
-// $("li").removeClass("not-clickable");
-
 $("li").click(function() {
   if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
 
@@ -66,7 +64,7 @@ $("li").click(function() {
         points += 2;
         document.getElementById("points").innerHTML = "Points: " + points;
         console.log(points);
-    } 
+    }
     
     else { 
         console.log("miss");
