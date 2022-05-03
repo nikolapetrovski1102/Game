@@ -12,9 +12,10 @@
             height: 400px;
             margin-top: 100%;
             border-radius: 15px;
-            position: relative;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transform: translate(250%, 0);
+            position: absolute;
+        }
+        div:not(:first-of-type){
+            margin-top: -140.4%;
         }
         body{
             display: flex;
@@ -27,17 +28,18 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: red;
+            background-color: aliceblue;
             border-radius: 15px;
             border: 3px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .back{
+            background-color: aliceblue;
             z-index: 9;
             text-align: center;
-            background-color: blue;
-            margin-top: -25%;
             border-radius: 15px;
             border: 3px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         p{
             margin-top: 25%;
@@ -52,73 +54,84 @@
             left: 40%;
         }
         .one{
-            position: absolute;
-            left: 105%;
-            z-index: 11;
+            z-index: 12;
         }
         .two{
-            position: absolute;
-            left: 3%;
-            z-index: 10;
+            margin-left: -2%;
+            z-index: 11;
         }
         .three{
-            position: absolute;
-            left: -99%;
-            z-index: 9;
+            margin-left: -4%;
+            z-index: 10;
         }
         .four{
-            position: absolute;
-            left: -202%;
-            z-index: 8;
+            margin-left: -5.9%;
+            z-index: 9;
         }
         .fifth{
-            position: absolute;
-            left: -304%;
+            margin-left: -5.9%;
             z-index: 8;
         }
         .six{
-            position: absolute;
-            left: -406.5%;
+            margin-left: -7.5%;
             z-index: 7;
         }
         .seven{
-            position: absolute;
-            left: -509%;
+            margin-left: -8.5%;
             z-index: 6;
         }
         .eight{
-            position: absolute;
-            left: -611%;
+            margin-left: -9%;
             z-index: 5;
         }
         .nine{
-            position: absolute;
-            left: -714%;
+            margin-left: -10%;
             z-index: 4;
         }
         .ten{
-            position: absolute;
-            left: -815.5%;
+            margin-left: -11%;
             z-index: 3;
         }
         .eleven{
-            position: absolute;
-            left: -918%;
+            margin-left: -12%;
             z-index: 2;
         }
         .twelve{
-            position: absolute;
-            left: -1018%;
+            margin-left: -13%;
             z-index: 1;
         }
-        section{
-            width: 160px;
+        #all{
+            width: 285px;
+            height: 400px;
+            position: absolute;
+        }
+        div{
+            display: flex;
+        }
+        @media only screen and (width: 375px){
+            div{
+                width: 40%;
+                height: 50%;
+            }
+            div:not(:first-of-type){
+                margin-top: -70.3%;
+            }
+            img{
+                width: 60px;
+            }
+            p{
+                font-size: .8rem;
+            }
+            h5{
+                left: 30%;
+                font-size: .6rem;
+            }
         }
     </style>
 </head>
 <body>
     
-    <section>
+    <aside id="all">
     <div onclick="Move()" class="one">
         <section class="front"> 
             <p>Влезен уред кој се користи за претворање на слики или принтан текст во дигитална форма се нарекува...</p>
@@ -131,8 +144,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="two" onclick="Move1()">
         <section class="front"> 
             <p>Уредите слушалки, микрофон, тастатура и скенер се од типот... </p>
@@ -145,8 +156,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="three" onclick="Move2()">
         <section class="front"> 
             <p>Каков вид на уред е дигиталната камера...</p>
@@ -159,8 +168,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="four" onclick="Move3()">
         <section class="front"> 
             <p>Кој вид на компјутерски глушец е прикажан на сликата... </p>
@@ -174,8 +181,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="fifth" onclick="Move4()">
         <section class="front"> 
             <p>Сите влезни и излезни уреди на еден омпјутер заедно со едно име можат да се наречат...</p>
@@ -188,8 +193,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="six" onclick="Move5()">
         <section class="front"> 
             <p>Периферните уреди може да бидат поврзани со комјутерот... </p>
@@ -202,8 +205,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="seven" onclick="Move6()">
         <section class="front"> 
             <p>Што се случува кога ќе се притисне ова копче...</p>
@@ -217,8 +218,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="eight" onclick="Move7()">
         <section class="front"> 
             <p>Во која група на копчиња спаѓаат копчињата на сликата...</p>
@@ -232,8 +231,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="nine" onclick="Move8()">
         <section class="front"> 
             <p>Најчесто користени влезни уреди се...</p>
@@ -246,8 +243,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="ten" onclick="Move9()">
         <section class="front"> 
             <p>Стандарден уред за покажување на лаптоп е... </p>
@@ -260,8 +255,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="eleven" onclick="Move10()">
         <section class="front"> 
             <p>Врската помеѓу копмјутерот и човекот е овозможена со користење на...</p>
@@ -274,8 +267,6 @@
             <br>
         </section> 
       </div>
-    </section>
-    <section>
     <div class="twelve" onclick="Move11()">
         <section class="front"> 
             <p>Christopher Latham Sholes во 1867 ја измислил...</p>
@@ -288,8 +279,7 @@
             <br>
         </section> 
       </div>
-    </section>
-    
+    </aside>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
@@ -299,52 +289,116 @@
                 speed: 600, 
             });
 
+            var w = window.innerWidth;
+
+            console.log(w);
+
             function Move(){
-                $(".one").animate({"margin-left" : "190%"}, 600)
-                $(".one").css("z-index", "111")
+                if(w == 375){
+                    $(".one").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
+                    $(".one").animate({"margin-left" : "190%"}, 600)
+                }
+                    $(".one").css("z-index", "111")
             }
             function Move1(){
-                $(".two").animate({"margin-left" : "190%"}, 600)
+                if(w == 375){
+                    $(".two").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
+                    $(".two").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".two").css("z-index", "222")
             }
             function Move2(){
-                $(".three").animate({"margin-left" : "190%"}, 600)
+                if(w == 375){
+                    $(".three").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
+                    $(".three").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".three").css("z-index", "333")
             }
             function Move3(){
-                $(".four").animate({"margin-left" : "190%"}, 600)
-                $(".four").css("z-index", "444")
+                if(w == 375){
+                    $(".four").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
+                    $(".four").animate({"margin-left" : "190%"}, 600)
+                }
+                    $(".four").css("z-index", "444")
             }
             function Move4(){
-                $(".fifth").animate({"margin-left" : "190%"}, 600)
-                $(".fifth").css("z-index", "555")
+                if(w == 375){
+                    $(".fifth").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
+                    $(".fifth").animate({"margin-left" : "190%"}, 600)
+                }
+                    $(".fifth").css("z-index", "555")
             }
             function Move5(){
+                if(w == 375){
+                    $(".six").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".six").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".six").css("z-index", "666")
             }
             function Move6(){
+                if(w == 375){
+                    $(".seven").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".seven").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".seven").css("z-index", "777")
             }
             function Move7(){
+                if(w == 375){
+                    $(".eight").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".eight").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".eight").css("z-index", "888")
             }
             function Move8(){
+                if(w == 375){
+                    $(".nine").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".nine").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".nine").css("z-index", "999")
             }
             function Move9(){
+                if(w == 375){
+                    $(".ten").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".ten").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".ten").css("z-index", "999")
             }
             function Move10(){
+                if(w == 375){
+                    $(".eleven").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".eleven").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".eleven").css("z-index", "1000")
             }
             function Move11(){
+                if(w == 375){
+                    $(".twelve").animate({"margin-left" : "70%"}, 600)
+                }
+                else{
                 $(".twelve").animate({"margin-left" : "190%"}, 600)
+                }
                 $(".twelve").css("z-index", "1111")
             }
             
