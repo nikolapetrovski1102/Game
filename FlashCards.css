@@ -5,6 +5,7 @@ div{
     margin-top: 100%;
     border-radius: 5px;
     position: absolute;
+    cursor: pointer;
 }
 div:not(:first-of-type){
     margin-top: -140.8%;
@@ -108,6 +109,12 @@ div{
         width: 40%;
         height: 50%;
     }
+    .front{
+        border: 3px solid rgb(180, 169, 169);
+    }
+    .back{
+        border: 3px solid rgb(180, 169, 169);
+    }
     div:not(:first-of-type){
         margin-top: -70.3%;
     }
@@ -122,13 +129,19 @@ div{
         font-size: .6rem;
     }
 }
-@media only screen and (min-width: 390px){
+@media only screen and (width: 390px){
     div{
         width: 40%;
         height: 50%;
     }
     div:not(:first-of-type){
         margin-top: -70.3%;
+    }
+    .front{
+        border: 3px solid rgb(180, 169, 169);
+    }
+    .back{
+        border: 3px solid rgb(180, 169, 169);
     }
     img{
         width: 60px;
@@ -139,6 +152,95 @@ div{
     h5{
         left: 30%;
         font-size: .6rem;
+    }
+}
+@media only screen and (width: 1920px){
+    div{
+        width: 80%;
+        height: 80%;
+    }
+    div:not(:first-of-type){
+        margin-top: -112.9%;
+    }
+    img{
+        width: 200px;
+    }
+    p{
+        font-size: .9rem;
+    }
+    h5{
+        left: 40%;
+        font-size: .6rem;
+    }
+}
+@media only screen and (width: 1024px){
+    div{
+        width: 80%;
+        height: 80%;
+        right: 70%;
+    }
+    div:not(:first-of-type){
+        margin-top: -112.9%;
+    }
+    img{
+        width: 200px;
+    }
+    p{
+        font-size: .9rem;
+    }
+    h5{
+        left: 40%;
+        font-size: .6rem;
+    }
+}
+@media only screen and (width: 412px){
+    div{
+        width: 45%;
+        height: 45%;
+    }
+    div:not(:first-of-type){
+        margin-top: -63.7%;
+    }
+    .front{
+        border: 3px solid rgb(180, 169, 169);
+    }
+    .back{
+        border: 3px solid rgb(180, 169, 169);
+    }
+    img{
+        width: 90px;
+    }
+    p{
+        font-size: .6rem;
+    }
+    h5{
+        left: 36%;
+        font-size: .5rem;
+    }
+}
+@media only screen and (width: 393px){
+    div{
+        width: 45%;
+        height: 45%;
+    }
+    .front{
+        border: 2px solid rgb(180, 169, 169);
+    }
+    .back{
+        border: 2px solid rgb(180, 169, 169);
+    }
+    div:not(:first-of-type){
+        margin-top: -63.7%;
+    }
+    img{
+        width: 90px;
+    }
+    p{
+        font-size: .6rem;
+    }
+    h5{
+        left: 36%;
+        font-size: .5rem;
     }
 }
 @media only screen and (width: 360px){
