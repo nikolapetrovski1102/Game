@@ -1,0 +1,143 @@
+div{
+    width: 280px;
+    text-align: center;
+    height: 400px;
+    margin-top: 100%;
+    border-radius: 5px;
+    position: absolute;
+}
+div:not(:first-of-type){
+    margin-top: -140.8%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div:active{
+    transform: translateY(5px);
+}
+.front{
+    width: 100%;
+    height: 100%;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 3px solid rgb(180, 169, 169);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.back{
+    background-color: aliceblue;
+    z-index: 9;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid rgb(180, 169, 169);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+    margin-top: 25%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.28rem;
+    font-weight: bold;
+}
+h5{
+    position: fixed;
+    bottom: 0%;
+    left: 40%;
+}
+.one{
+    z-index: 12;
+}
+.two{
+    margin-left: -1.7%;
+    z-index: 11;
+}
+.three{
+    margin-left: -3.0%;
+    z-index: 10;
+}
+.four{
+    margin-left: -4.5%;
+    z-index: 9;
+}
+.fifth{
+    margin-left: -5.5%;
+    z-index: 8;
+}
+.six{
+    margin-left: -6.9%;
+    z-index: 7;
+}
+.seven{
+    margin-left: -8.5%;
+    z-index: 6;
+}
+.eight{
+    margin-left: -9.9%;
+    z-index: 5;
+}
+.nine{
+    margin-left: -11.5%;
+    z-index: 4;
+}
+.ten{
+    margin-left: -12.9%;
+    z-index: 3;
+}
+.eleven{
+    margin-left: -14.2%;
+    z-index: 2;
+}
+.twelve{
+    margin-left: -15.7%;
+    z-index: 1;
+}
+#all{
+    width: 285px;
+    height: 400px;
+    position: absolute;
+}
+div{
+    display: flex;
+}
+@media only screen and (width: 375px){
+    div{
+        width: 40%;
+        height: 50%;
+    }
+    div:not(:first-of-type){
+        margin-top: -70.3%;
+    }
+    img{
+        width: 60px;
+    }
+    p{
+        font-size: .8rem;
+    }
+    h5{
+        left: 30%;
+        font-size: .6rem;
+    }
+}
+@media only screen and (min-width: 390px){
+    div{
+        width: 40%;
+        height: 50%;
+    }
+    div:not(:first-of-type){
+        margin-top: -70.3%;
+    }
+    img{
+        width: 60px;
+    }
+    p{
+        font-size: .8rem;
+    }
+    h5{
+        left: 30%;
+        font-size: .6rem;
+    }
+}

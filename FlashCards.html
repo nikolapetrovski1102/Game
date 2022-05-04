@@ -5,129 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        div{
-            width: 280px;
-            text-align: center;
-            height: 400px;
-            margin-top: 100%;
-            border-radius: 15px;
-            position: absolute;
-        }
-        div:not(:first-of-type){
-            margin-top: -140.4%;
-        }
-        body{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .front{
-            width: 100%;
-            height: 100%;            
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: aliceblue;
-            border-radius: 15px;
-            border: 3px solid black;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .back{
-            background-color: aliceblue;
-            z-index: 9;
-            text-align: center;
-            border-radius: 15px;
-            border: 3px solid black;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        p{
-            margin-top: 25%;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.28rem;
-            font-weight: bold;
-        }
-        h5{
-            position: fixed;
-            bottom: 0%;
-            left: 40%;
-        }
-        .one{
-            z-index: 12;
-        }
-        .two{
-            margin-left: -2%;
-            z-index: 11;
-        }
-        .three{
-            margin-left: -4%;
-            z-index: 10;
-        }
-        .four{
-            margin-left: -5.9%;
-            z-index: 9;
-        }
-        .fifth{
-            margin-left: -5.9%;
-            z-index: 8;
-        }
-        .six{
-            margin-left: -7.5%;
-            z-index: 7;
-        }
-        .seven{
-            margin-left: -8.5%;
-            z-index: 6;
-        }
-        .eight{
-            margin-left: -9%;
-            z-index: 5;
-        }
-        .nine{
-            margin-left: -10%;
-            z-index: 4;
-        }
-        .ten{
-            margin-left: -11%;
-            z-index: 3;
-        }
-        .eleven{
-            margin-left: -12%;
-            z-index: 2;
-        }
-        .twelve{
-            margin-left: -13%;
-            z-index: 1;
-        }
-        #all{
-            width: 285px;
-            height: 400px;
-            position: absolute;
-        }
-        div{
-            display: flex;
-        }
-        @media only screen and (width: 375px){
-            div{
-                width: 40%;
-                height: 50%;
-            }
-            div:not(:first-of-type){
-                margin-top: -70.3%;
-            }
-            img{
-                width: 60px;
-            }
-            p{
-                font-size: .8rem;
-            }
-            h5{
-                left: 30%;
-                font-size: .6rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="FlashCards.css">
 </head>
 <body>
     
@@ -183,7 +61,7 @@
       </div>
     <div class="fifth" onclick="Move4()">
         <section class="front"> 
-            <p>Сите влезни и излезни уреди на еден омпјутер заедно со едно име можат да се наречат...</p>
+            <p>Сите влезни и излезни уреди на еден компјутер заедно со едно име можат да се наречат...</p>
             <h5>FlashCards</h5>
         </section> 
         <section class="back">
@@ -212,7 +90,7 @@
             <img src="images/CapsLock.png" alt="CapsLock" width="250">
         </section> 
         <section class="back">
-            <p>Жично и безжично</p>
+            <p>Сите букви кои понатаму ќе ги напишеме ќе бидат ГОЛЕМИ БУКВИ</p>
             <br>
             <br>
             <br>
@@ -282,127 +160,7 @@
     </aside>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-
-    <script>
-
-            $("div").flip({
-                speed: 600, 
-            });
-
-            var w = window.innerWidth;
-
-            console.log(w);
-
-            function Move(){
-                if(w == 375){
-                    $(".one").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                    $(".one").animate({"margin-left" : "190%"}, 600)
-                }
-                    $(".one").css("z-index", "111")
-            }
-            function Move1(){
-                if(w == 375){
-                    $(".two").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                    $(".two").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".two").css("z-index", "222")
-            }
-            function Move2(){
-                if(w == 375){
-                    $(".three").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                    $(".three").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".three").css("z-index", "333")
-            }
-            function Move3(){
-                if(w == 375){
-                    $(".four").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                    $(".four").animate({"margin-left" : "190%"}, 600)
-                }
-                    $(".four").css("z-index", "444")
-            }
-            function Move4(){
-                if(w == 375){
-                    $(".fifth").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                    $(".fifth").animate({"margin-left" : "190%"}, 600)
-                }
-                    $(".fifth").css("z-index", "555")
-            }
-            function Move5(){
-                if(w == 375){
-                    $(".six").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".six").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".six").css("z-index", "666")
-            }
-            function Move6(){
-                if(w == 375){
-                    $(".seven").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".seven").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".seven").css("z-index", "777")
-            }
-            function Move7(){
-                if(w == 375){
-                    $(".eight").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".eight").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".eight").css("z-index", "888")
-            }
-            function Move8(){
-                if(w == 375){
-                    $(".nine").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".nine").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".nine").css("z-index", "999")
-            }
-            function Move9(){
-                if(w == 375){
-                    $(".ten").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".ten").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".ten").css("z-index", "999")
-            }
-            function Move10(){
-                if(w == 375){
-                    $(".eleven").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".eleven").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".eleven").css("z-index", "1000")
-            }
-            function Move11(){
-                if(w == 375){
-                    $(".twelve").animate({"margin-left" : "70%"}, 600)
-                }
-                else{
-                $(".twelve").animate({"margin-left" : "190%"}, 600)
-                }
-                $(".twelve").css("z-index", "1111")
-            }
-            
-    </script>
+        <script src="/FlashCards.js"></script>
 
 </body>
 </html>
