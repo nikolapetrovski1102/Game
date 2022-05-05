@@ -17,6 +17,8 @@ var images = [
         'images/scanner.png',
 ];
 
+console.log(window.innerWidth);
+
 for (var i = 0; i < 8; i++) { 
   var rand = Math.floor(Math.random() * (1200 - 900 + 1) + 900); 
 }
@@ -28,22 +30,31 @@ for (var i = 0; i < 16; i++) {
   output += "<img src = '" + images[i] + "'/>";
   output += "</li>";
 }
+
+
 output += "</ol>";
 document.getElementById("container").innerHTML = output;
-$("img").hide();
+
 $(".winner").hide();
+
+$(window).on('load', function() {
+  setTimeout(() => {
+      $("img").fadeOut("slow");
+      console.log("Hide");
+  }, 1000);
+ });
 
 var guess1 = "";
 var guess2 = "";
 var count = 0;
 var points = 0;
 
+
 $("li").click(function() {
   if ((count < 2) &&  ($(this).children("img").hasClass("face-up")) === false) {
 
-    
     count++;
-    $(this).children("img").show();
+    $(this).children("img").fadeIn("fast");
     $(this).children("img").addClass("face-up");
     
     if (count === 1 ) { 
@@ -56,7 +67,7 @@ $("li").click(function() {
       $("li").addClass("not-clickable");
       setTimeout(function(){
             $("li").removeClass("not-clickable");
-       },1000);
+       },600);
       
       if (guess1 === guess2) { 
         console.log("match");
@@ -69,9 +80,9 @@ $("li").click(function() {
     else { 
         console.log("miss");
         setTimeout(function() {
-            $("img").not(".match").hide();
+            $("img").not(".match").fadeOut("slow");
             $("img").not(".match").removeClass("face-up");
-        }, 1000);
+        }, 700);
         points--;
         if (points < 0){
             points++;
