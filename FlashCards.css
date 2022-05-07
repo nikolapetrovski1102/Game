@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-div:active{
+div:not:(:first-of-type):active{
     transform: translateY(5px);
 }
 .front{
@@ -129,6 +129,25 @@ div{
         font-size: .6rem;
     }
 }
+@media only screen and (width: 414px){
+    div{
+        width: 50%;
+        height: 50%;
+    }
+    div:not(:first-of-type){
+        margin-top: -71%;
+    }
+    img{
+        width: 70px;
+    }
+    p{
+        font-size: .8rem;
+    }
+    h5{
+        left: 35%;
+        font-size: .6rem;
+    }
+}
 @media only screen and (width: 390px){
     div{
         width: 40%;
@@ -217,6 +236,19 @@ div{
         left: 36%;
         font-size: .5rem;
     }
+}
+@media only screen and (width: 1366px){
+        div{
+            right: 10%;
+            width: 95%;
+            height: 95%;
+        }
+        div:not(:first-of-type){
+            margin-top: -134.5%;
+        }
+        img{
+            width: 220px;
+        }
 }
 @media only screen and (width: 393px){
     div{
@@ -315,3 +347,136 @@ div{
         z-index: 1;
     }
 }
+.winner{    
+    width: 600px;
+    height: 400px;
+    background-color: pink;
+    border: 3px solid black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, 0);
+    transition: transform 2s;
+    text-align: center;
+    justify-content: center;
+    z-index: 2222;
+}
+.winner button{
+    margin-top: 35%;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    animation-duration: 3s;
+  }
+  .winner h1{
+      margin-left: 5%;
+  }
+  .winner button:active{
+    opacity: .5;
+    transform: translateY(3px);
+  }
+  .winner button:hover{
+    transform: scale(1.2);
+  }
+  @media only screen and (max-width: 390px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
+  @media only screen and (max-width: 280px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .winner {
+      width: 300px;
+      height: 200px;
+    }
+    .winner button{
+        width: 70px;
+        height: 30px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1rem;
+      margin-right: 15%;
+    }
+  }
