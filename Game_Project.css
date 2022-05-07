@@ -121,6 +121,23 @@ h1 {
       width: 50%;
       margin-top: -2%;
     }
+    .winner {
+      width: 600px;
+      height: 400px;
+    }
+    .winner button{
+        width: 110px;
+        height: 50px;
+        font-size: .6rem;
+        margin-bottom: 15%;
+    }
+    .winner h1{
+      font-size: 1.4rem;
+      margin-right: 5%;
+    }
+    .winner #final{
+      margin-top: 15%;
+    }
   }
   @media only screen and (max-width: 390px) {
     li {
