@@ -4,7 +4,7 @@ $("div").flip({
 
 var w = window.innerWidth;
 
-// $(".winner").hide();
+$(".winner").hide();
 
 console.log(w);
 
@@ -119,5 +119,4 @@ function Move11(){
     setTimeout(() => {
         $(".winner").show("slow");
     }, 800);
-
 }
