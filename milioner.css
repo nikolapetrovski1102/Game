@@ -3,7 +3,7 @@
     color: #fff;
 }
 body{
-    background-image: url("/images/background__Millionaire_.jpg");
+    background-image: url("images/background__Millionaire_.jpg");
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
