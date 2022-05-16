@@ -2,6 +2,11 @@ h1 {
     font-size: 1.5em;
     margin-left: 44px;
   }
+  body{
+    background-image: url("https://images.hdqwalls.com/wallpapers/green-blue-purple-blur-4k-68.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   #container { 
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -29,6 +34,9 @@ h1 {
     background-position: center;
     background-size: cover;
     cursor: pointer;
+  }
+  li:active{
+    transform: translateY(5px);
   }
   img {
     width: 100%;
@@ -282,4 +290,15 @@ h1 {
  }
  .not-clickable{
    pointer-events: none;;
+ }
+ @media only screen and (max-width: 600px){
+  #container{
+    width: 73%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  li:active{
+    transform: translateY(1.5px);
+  }
  }

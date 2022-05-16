@@ -14,6 +14,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("https://images.hdqwalls.com/wallpapers/green-blue-purple-blur-4k-68.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 div:not:(:first-of-type):active{
     transform: translateY(5px);
