@@ -134,11 +134,47 @@
                 },
             ]
         }
-
-
         
+        const countContainer = document.getElementById("timer");
+
+        var remainingTime = 30;
+
+        function renderTime() {
+            remainingTime -= 1;
+
+            countContainer.innerHTML = remainingTime;
+
+            if (remainingTime === 0) {
+                isStopped = true;
+                clearInterval(timer);
+                remainingTime = 30;
+                End();
+                $("#timer").hide("slow")
+            }
+        }
+
+        function startTimer () {
+            countContainer.innerHTML = remainingTime;
+            timer = setInterval(renderTime, 1000);
+        };
+
+        function stopTimer () {
+            isStopped = true;
+            if (timer) {
+              clearInterval(timer);
+            }
+          }
+
+          function resetTimer () {
+            isStopped = true;
+            clearInterval(timer);
+            remainingTime = 30;
+            countContainer.innerHTML = remainingTime;
+          };
+
+        startTimer();
+
         var brojac = -1;
-        
         
         console.log(QA);
         
@@ -173,29 +209,27 @@
     function CallBack(click_text, click_element) {
                 if (click_text === QA.game[brojac].answer){
                     click_element.style.backgroundColor = "green";
+                    resetTimer();
                     setTimeout( () => {
                         console.log("pogodok");
                         console.log(QA);
-                        setTimeout(() => {
+                            startTimer();
                             CreateQuestions();
-                        }, 1000);
-                    }, 1500)
-                }
-                else{
-                    click_element.style.backgroundColor = "red";
-                    setTimeout(() => {
-                        for (let p = 0; p < 4; p++){
+                        }, 1000)
+                    }
+                    else{
+                        stopTimer();
+                        $("#timer").hide();
+                        click_element.style.backgroundColor = "red";
+                        setTimeout(() => {
+                            for (let p = 0; p < 4; p++){
                             if($("#proba" + p).text() === QA.game[brojac].answer){
                                 $("#proba" + p).css("background-color", "green");
                             }
                         }
                     }, 500);
                     setTimeout( () => {
-                        $("section").fadeOut("fast");
-                        $("#lose").fadeIn("slow");
-                        $("#lose button").click( function () {
-                            location.reload();
-                        })
+                        End();
                         console.log("utka");
                     }, 1500)
                 }
@@ -233,3 +267,10 @@
             QA.game[y].answers.randomize();
         }
       }
+      function End() {
+        $("section").fadeOut("fast");
+        $("#lose").fadeIn("slow");
+        $("#lose button").click( function () {
+            location.reload();
+        })
+    }

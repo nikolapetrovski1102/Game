@@ -41,7 +41,7 @@ $(window).on('load', function() {
   setTimeout(() => {
       $("img").fadeOut("slow");
       console.log("Hide");
-  }, 1000);
+  }, 2500);
  });
 
 var guess1 = "";
