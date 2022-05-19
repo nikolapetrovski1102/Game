@@ -1,4 +1,5 @@
         $("#lose").hide();
+        $(".winner").hide();
         
         var QA = {
             "game" : [
@@ -176,33 +177,37 @@
 
         var brojac = -1;
         
-        console.log(QA);
-        
         randomizeQuestions();
 
         randomizeAnwsers();
-        
-        console.log(QA);
         
         CreateQuestions();
 
         function CreateQuestions(){
             brojac++;
 
-            var para = "";
-                var btn = "";
-                
-                para += "<h2>" + QA.game[brojac].question + "</h2>";
+            if (brojac >= 13){
+                console.log("zavrsi");
+                stopTimer();
+                $("section").hide("slow");
+                $(".winner").slideDown("slow");
+            }
+            else{
+                    var para = "";
+                    var btn = "";
+                    
+                    para += "<h2>" + QA.game[brojac].question + "</h2>";
 
-                document.getElementById("question").innerHTML = para;
-        
-                for (let o = 0; o < 4; o++){
-                    btn += "<button id='proba" + o + "'onclick='CallBack(this.innerHTML, this)'>" + QA.game[brojac].answers[o] + "</button>"
+                    document.getElementById("question").innerHTML = para;
+            
+                    for (let o = 0; o < 4; o++){
+                        btn += "<button id='proba" + o + "'onclick='CallBack(this.innerHTML, this)'>" + QA.game[brojac].answers[o] + "</button>"
+                    }
+                    
+                    document.getElementById("answers").innerHTML = btn;
+                    
+                    console.log(brojac);
                 }
-                
-                document.getElementById("answers").innerHTML = btn;
-                
-                console.log(brojac);
             }
             
 
@@ -212,9 +217,9 @@
                     resetTimer();
                     setTimeout( () => {
                         console.log("pogodok");
-                        console.log(QA);
+                        // console.log(QA);
                             startTimer();
-                            CreateQuestions();
+                                CreateQuestions();
                         }, 1000)
                     }
                     else{
